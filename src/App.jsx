@@ -14,7 +14,7 @@ function App() {
       <Card sx={{ maxWidth: 400, marginLeft: 'auto' }}>
         <CardContent>
           <Typography variant="h3" gutterBottom>
-            Dream Countdown with Frida
+            Dream Countdown with Frida 1.0
           </Typography>
           <SleepCalculator />
         </CardContent>
