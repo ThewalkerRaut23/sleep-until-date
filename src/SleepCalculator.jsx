@@ -20,20 +20,24 @@ const SleepCalculator = () => {
   };
 
   const sleeps = calculateSleeps();
+  const minDate = moment().format('YYYY-MM-DD')
 
   return (
     <div style={{ textAlign: 'center', marginTop: '50px' }}>
-      <Typography variant="h4" gutterBottom>
-        Countdown to Selected Date
+      <Typography variant="h6" gutterBottom>
+        Select Date :
       </Typography>
       <TextField
         id="date-picker"
-        label="Select Date"
+        label=""
         type="date"
         defaultValue={selectedDate}
         onChange={handleDateChange}
         InputLabelProps={{
           shrink: true,
+        }}
+        inputProps={{
+          min: minDate, 
         }}
         style={{ marginBottom: '20px' }}
       />

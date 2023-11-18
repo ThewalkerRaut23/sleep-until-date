@@ -10,11 +10,12 @@ function App() {
       alignItems="center"
       minHeight="100vh"
       textAlign="center"
+      marginLeft= "10%"
     >
-      <Card sx={{ maxWidth: 400, marginLeft: 'auto' }}>
+      <Card sx={{ maxWidth: 1000, marginLeft: 'auto' }}>
         <CardContent>
           <Typography variant="h3" gutterBottom>
-            Dream Countdown with Frida 1.0
+            Dream Countdown with Frida
           </Typography>
           <SleepCalculator />
         </CardContent>
