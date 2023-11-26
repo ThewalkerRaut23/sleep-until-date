@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import  { useState } from 'react';
 import { TextField, Typography } from '@mui/material';
 import moment from 'moment'; // or import { differenceInDays } from 'date-fns';
 
@@ -14,7 +14,9 @@ const SleepCalculator = () => {
 
     const currentDate = moment();
     const chosenDate = moment(selectedDate);
-    const difference = chosenDate.diff(currentDate, 'days');
+
+    // Calculate the difference in nights instead of days
+    const difference = chosenDate.diff(currentDate, 'days') + 1; // Adding 1 for the current night
 
     return difference;
   };
@@ -25,7 +27,7 @@ const SleepCalculator = () => {
   return (
     <div style={{ textAlign: 'center', marginTop: '50px' }}>
       <Typography variant="h6" gutterBottom>
-        Select Date :
+        Select Date:
       </Typography>
       <TextField
         id="date-picker"
